@@ -13,7 +13,7 @@ public class Main {
                 Filme de aventura com galã dos anos 80
                 Muito bom! 
                 Ano de lançamento
-                """ + anoDeLancamento;
+                """ + anoDeLancamento  + " " +  (int) (media);
         
         System.out.println(sinopse);
 
