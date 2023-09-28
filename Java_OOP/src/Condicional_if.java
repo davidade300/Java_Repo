@@ -3,7 +3,7 @@ public class Condicional_if {
         
         int anoDeLancamento = 2022;
         boolean incluidoNoPlano = true;
-        double notaDoFilme = 8.1;
+        // double notaDoFilme = 8.1;
         String tiploPlano = "plus";
         
         if (anoDeLancamento >= 2022){
