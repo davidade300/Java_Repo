@@ -1,3 +1,4 @@
+import David.ScreenMatch.Modelo.Filme;
 
 public class Principal {
     public static void main(String[] args) {
@@ -11,8 +12,11 @@ public class Principal {
         meuFilme.avalia(5);
         meuFilme.avalia(10);
         meuFilme.avalia(6);
-        System.out.println(meuFilme.somaDasAvaliacoes);
-        System.out.println(meuFilme.totalDeAvalicoes);
+        //System.out.println(meuFilme.somaDasAvaliacoes);
+        //System.out.println(meuFilme.totalDeAvalicoes);
+        System.out.println(meuFilme.pegaMedia());
+        //meuFilme.somaDasAvaliacoes = 10;
+        //meuFilme.totalDeAvalicoes = 1;
         System.out.println(meuFilme.pegaMedia());
     }
 }
