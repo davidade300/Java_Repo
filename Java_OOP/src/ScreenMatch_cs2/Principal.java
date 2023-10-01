@@ -1,12 +1,12 @@
-import David.ScreenMatch.Modelo.Filme;
+import modelos.Filme;
 
 public class Principal {
     public static void main(String[] args) {
 
         Filme meuFilme = new Filme(); // tipo por referência
-        meuFilme.nome = "Olha eu aqui denovo";
-        meuFilme.anoDeLancamento = 1970;
-        meuFilme.duracaoEmMinutos = 180;
+        meuFilme.setNome("Olha eu aqui denovo");
+        meuFilme.setAnoDeLancamento(1970); 
+        meuFilme.setDuracaoEmMinutos(180);
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(5);
