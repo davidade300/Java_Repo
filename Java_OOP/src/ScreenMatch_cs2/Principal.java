@@ -1,4 +1,5 @@
 import Model.Filme;
+import Model.Serie;
 
 public class Principal {
     public static void main(String[] args) {
@@ -18,5 +19,13 @@ public class Principal {
         //meuFilme.somaDasAvaliacoes = 10;
         //meuFilme.totalDeAvalicoes = 1;
         System.out.println(meuFilme.pegaMedia());
+
+        Serie lost = new Serie();
+        lost.setNome("Lost");
+        lost.setAnoDeLancamento(2000);
+        lost.exibeFichaTecnica();
+        lost.setTemporadas(10);
+        lost.setEpisodiosPorTemporada(10);
+        
     }
 }
