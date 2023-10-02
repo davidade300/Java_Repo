@@ -1,4 +1,4 @@
-package modelos;
+package Model;
 public class Filme{
     private String nome; //atributos
     private int anoDeLancamento; //atributos
