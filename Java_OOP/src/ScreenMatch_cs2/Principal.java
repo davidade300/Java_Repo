@@ -1,4 +1,6 @@
 import Calculos.CalculadoraDeTempo;
+import Calculos.FiltroRecomendacao;
+import Model.Episodio;
 import Model.Filme;
 import Model.Serie;
 
@@ -43,6 +45,15 @@ public class Principal {
         calculadora.inclui(meuFilme);
         calculadora.inclui(lost);
         System.out.println(calculadora.getTempoTotal());
+
+        FiltroRecomendacao filtro = new FiltroRecomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.settotalDeVisualizacoes(300);
+        filtro.filtra(episodio);
         
     }
 }
