@@ -1,3 +1,4 @@
+import Calculos.CalculadoraDeTempo;
 import Model.Filme;
 import Model.Serie;
 
@@ -8,6 +9,7 @@ public class Principal {
         meuFilme.setNome("Olha eu aqui denovo");
         meuFilme.setAnoDeLancamento(1970); 
         meuFilme.setDuracaoEmMinutos(180);
+        System.out.println("Duracao do filme: " + meuFilme.getDuracaoEmMinutos());
 
         meuFilme.exibeFichaTecnica();
         meuFilme.avalia(5);
@@ -26,6 +28,21 @@ public class Principal {
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
+        lost.setMinutosPorEpisodio(50);
+        System.out.println("Tempo para maratonar Lost: " + lost.getDuracaoEmMinutos());
+
+
+        Filme outroFilme = new Filme(); // tipo por referência
+        outroFilme.setNome("xD");
+        outroFilme.setAnoDeLancamento(2023); 
+        outroFilme.setDuracaoEmMinutos(181);
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(outroFilme);
+        System.out.println(calculadora.getTempoTotal());
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(lost);
+        System.out.println(calculadora.getTempoTotal());
         
     }
 }

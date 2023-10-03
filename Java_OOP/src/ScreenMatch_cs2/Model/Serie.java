@@ -31,4 +31,10 @@ public class Serie extends Titulo {
     public void setMinutosPorEpisodio(int minutosPorEpisodio) {
         this.minutosPorEpisodio = minutosPorEpisodio;
     }
+
+    @Override //"especialização"
+    //metodo que sobrescreve o da superclase
+    public int getDuracaoEmMinutos() {
+        return  temporadas * episodiosPorTemporada * minutosPorEpisodio;
+    }
 }
