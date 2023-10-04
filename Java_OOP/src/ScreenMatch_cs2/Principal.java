@@ -1,8 +1,9 @@
-import Calculos.CalculadoraDeTempo;
-import Calculos.FiltroRecomendacao;
-import Model.Episodio;
-import Model.Filme;
-import Model.Serie;
+package ScreenMatch_cs2;
+import ScreenMatch_cs2.Calculos.CalculadoraDeTempo;
+import ScreenMatch_cs2.Calculos.FiltroRecomendacao;
+import ScreenMatch_cs2.Modelo.Episodio;
+import ScreenMatch_cs2.Modelo.Filme;
+import ScreenMatch_cs2.Modelo.Serie;
 
 public class Principal {
     public static void main(String[] args) {

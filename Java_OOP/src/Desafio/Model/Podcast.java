@@ -1,4 +1,4 @@
-package Model;
+package Desafio.Model;
 public class Podcast extends Audio{
     private String apresentador;
     private String convidado;

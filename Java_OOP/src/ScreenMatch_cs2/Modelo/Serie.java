@@ -1,4 +1,4 @@
-package Model;
+package ScreenMatch_cs2.Modelo;
 
 public class Serie extends Titulo {
     private int temporadas;

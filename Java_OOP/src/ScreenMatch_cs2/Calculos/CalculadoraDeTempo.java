@@ -1,5 +1,5 @@
-package Calculos;
-import Model.Titulo;
+package ScreenMatch_cs2.Calculos;
+import ScreenMatch_cs2.Modelo.Titulo;
 
 public class CalculadoraDeTempo {
     private int tempoTotal = 0;

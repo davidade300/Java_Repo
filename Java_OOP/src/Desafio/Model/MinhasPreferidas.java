@@ -1,4 +1,4 @@
-package Model;
+package Desafio.Model;
 
 public class MinhasPreferidas {
     

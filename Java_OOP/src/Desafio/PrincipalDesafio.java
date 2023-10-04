@@ -1,6 +1,7 @@
-import Model.MinhasPreferidas;
-import Model.Musica;
-import Model.Podcast;
+package Desafio;
+import Desafio.Model.MinhasPreferidas;
+import Desafio.Model.Musica;
+import Desafio.Model.Podcast;
 
 public class PrincipalDesafio {
     public static void main(String[] args) {

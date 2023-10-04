@@ -1,4 +1,4 @@
-package Model;
+package ScreenMatch_cs2.Modelo;
 
 public class Titulo {
     private String nome; //atributos

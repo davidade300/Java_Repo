@@ -1,4 +1,4 @@
-package Model;
+package Desafio.Model;
 
 public class Musica extends Audio{
     private String album;

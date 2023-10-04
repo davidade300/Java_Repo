@@ -1,4 +1,4 @@
-package Calculos;
+package ScreenMatch_cs2.Calculos;
 
 public class FiltroRecomendacao {
     

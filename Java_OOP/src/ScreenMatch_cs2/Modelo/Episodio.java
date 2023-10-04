@@ -1,6 +1,6 @@
-package Model;
+package ScreenMatch_cs2.Modelo;
 
-import Calculos.Classificavel;
+import ScreenMatch_cs2.Calculos.Classificavel;
 
 public class Episodio implements Classificavel {
     private int numero;
