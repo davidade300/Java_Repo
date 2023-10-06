@@ -1,4 +1,6 @@
 package ScreenMatch_cs2;
+import java.util.ArrayList;
+
 import ScreenMatch_cs2.Calculos.CalculadoraDeTempo;
 import ScreenMatch_cs2.Calculos.FiltroRecomendacao;
 import ScreenMatch_cs2.Modelo.Episodio;
@@ -55,6 +57,20 @@ public class Principal {
         episodio.setSerie(lost);
         episodio.settotalDeVisualizacoes(300);
         filtro.filtra(episodio);
+
+        var filmeDoPaulo = new Filme();
+        filmeDoPaulo.setDuracaoEmMinutos(200);
+        filmeDoPaulo.setNome("Dogville");
+        filmeDoPaulo.setAnoDeLancamento(2003);
+        filmeDoPaulo.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+        listaDeFilmes.add(filmeDoPaulo);
+        System.out.println("Tamanho da lista de filme: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme da lista: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes.toString());
         
     }
 }

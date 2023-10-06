@@ -18,5 +18,15 @@ public class Filme extends Titulo implements Classificavel{ // implements nomeDa
     public int getClassificacao() {
         return (int) pegaMedia() / 2;
     }
+
+    @Override //sobrescreve o metodo toString, inerente à todos os objetos,
+    // já que todos os objetos estendem a classe object, dessa forma ao printarmos um objeto filme,
+    // em vez de printar a mensagem padrão + @ + endereço de memoria, será printado a implementacao
+    // do override do toString() 
+    public String toString() {
+        return "Filme: " + this.getNome() + " (" + this.getAnoDeLancamento() + ") ";
+    }
+    
+    
     
 }
