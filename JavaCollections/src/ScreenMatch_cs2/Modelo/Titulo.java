@@ -1,6 +1,6 @@
 package ScreenMatch_cs2.Modelo;
 
-public class Titulo {
+public class Titulo implements Comparable<Titulo> {
     private String nome; //atributos
     private int anoDeLancamento; //atributos
     private boolean incluidoNoPlano; //atributos
@@ -63,5 +63,10 @@ public class Titulo {
     // metodo \/
     public double pegaMedia(){
         return somaDasAvaliacoes / totalDeAvalicoes;
+    }
+
+    @Override
+    public int compareTo(Titulo o) {
+        return this.getNome().compareTo(nome);
     }
 }

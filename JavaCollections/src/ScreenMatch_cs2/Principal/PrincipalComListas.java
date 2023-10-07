@@ -1,7 +1,7 @@
 package ScreenMatch_cs2.Principal;
 
 import java.util.ArrayList;
-
+import java.util.Collections;
 import ScreenMatch_cs2.Calculos.CalculadoraDeTempo;
 import ScreenMatch_cs2.Calculos.FiltroRecomendacao;
 import ScreenMatch_cs2.Modelo.Episodio;
@@ -84,5 +84,19 @@ public class PrincipalComListas {
             }
         }
         
+        ArrayList<String> buscaPorArtista = new ArrayList<>();
+        buscaPorArtista.add("Adam Sandler");
+        buscaPorArtista.add("Paulo");
+        buscaPorArtista.add("Jacqueline");
+
+        Collections.sort(buscaPorArtista);
+        System.out.println("Depois da ordenação");
+        System.out.println(buscaPorArtista);
+
+        System.out.println("Lista de títulos ordenados");
+        Collections.sort(lista);
+        System.out.println(lista);
+
+
     }
 }
