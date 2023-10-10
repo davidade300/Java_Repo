@@ -2,6 +2,8 @@ package ScreenMatch_cs2.Principal;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+
 import ScreenMatch_cs2.Calculos.CalculadoraDeTempo;
 import ScreenMatch_cs2.Calculos.FiltroRecomendacao;
 import ScreenMatch_cs2.Modelo.Episodio;
@@ -96,7 +98,7 @@ public class PrincipalComListas {
         System.out.println("Lista de títulos ordenados");
         Collections.sort(lista);
         System.out.println(lista);
-
+        lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
 
     }
 }
