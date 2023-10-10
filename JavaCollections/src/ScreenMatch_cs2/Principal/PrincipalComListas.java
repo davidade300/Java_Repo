@@ -3,6 +3,8 @@ package ScreenMatch_cs2.Principal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 import ScreenMatch_cs2.Calculos.CalculadoraDeTempo;
 import ScreenMatch_cs2.Calculos.FiltroRecomendacao;
@@ -15,8 +17,6 @@ public class PrincipalComListas {
      public static void main(String[] args) {
 
         Filme meuFilme = new Filme("Olha eu aqui denovo", 1970); // tipo por referência
-        //meuFilme.setNome("Olha eu aqui denovo");
-        //meuFilme.setAnoDeLancamento(1970); 
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duracao do filme: " + meuFilme.getDuracaoEmMinutos());
 
@@ -24,16 +24,12 @@ public class PrincipalComListas {
         meuFilme.avalia(5);
         meuFilme.avalia(10);
         meuFilme.avalia(6);
-        //System.out.println(meuFilme.somaDasAvaliacoes);
-        //System.out.println(meuFilme.totalDeAvalicoes);
+      
         System.out.println(meuFilme.pegaMedia());
-        //meuFilme.somaDasAvaliacoes = 10;
-        //meuFilme.totalDeAvalicoes = 1;
         System.out.println(meuFilme.pegaMedia());
 
         Serie lost = new Serie("Lost", 2000);
-        //lost.setNome("Lost");
-        //lost.setAnoDeLancamento(2000);
+        
         lost.exibeFichaTecnica();
         lost.setTemporadas(10);
         lost.setEpisodiosPorTemporada(10);
@@ -42,8 +38,6 @@ public class PrincipalComListas {
 
 
         Filme outroFilme = new Filme("xD",2023); // tipo por referência
-        //outroFilme.setNome("xD");
-        //outroFilme.setAnoDeLancamento(2023); 
         outroFilme.setDuracaoEmMinutos(181);
 
         CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
@@ -64,11 +58,9 @@ public class PrincipalComListas {
 
         var filmeDoPaulo = new Filme("Dogville",2003);
         filmeDoPaulo.setDuracaoEmMinutos(200);
-        //filmeDoPaulo.setNome("Dogville");
-        //filmeDoPaulo.setAnoDeLancamento(2003);
         filmeDoPaulo.avalia(10);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(meuFilme);
         lista.add(outroFilme);
         lista.add(filmeDoPaulo);
@@ -99,6 +91,7 @@ public class PrincipalComListas {
         Collections.sort(lista);
         System.out.println(lista);
         lista.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        // faz a ordenação pelo ano de lancamento
         System.out.println("Ordenando por ano");
         System.out.println(lista);
         
