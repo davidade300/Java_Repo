@@ -1,11 +1,16 @@
 package ScreenMatch_cs2.Modelo;
 
+import com.google.gson.annotations.SerializedName;
+
 public class Titulo implements Comparable<Titulo> {
+    @SerializedName("Title") // anotacoes sao metadados
     private String nome; //atributos
+    @SerializedName("Year")
     private int anoDeLancamento; //atributos
     private boolean incluidoNoPlano; //atributos
     private double somaDasAvaliacoes; //atributos
     private int totalDeAvalicoes; //atributos
+    //@SerializedName("Runtime") -> gera erro de compilacao
     private int duracaoEmMinutos; // atributos
 
     
@@ -13,6 +18,12 @@ public class Titulo implements Comparable<Titulo> {
     public Titulo(String nome, int anoDeLancamento) {
         this.nome = nome;
         this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public Titulo(TituloOmdb meuTituloOmdb) {
+        this.nome = meuTituloOmdb.Title();
+        this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
+        this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.Runtime().substring(0,2));
     }
 
     public String getNome() {
@@ -63,6 +74,12 @@ public class Titulo implements Comparable<Titulo> {
     // metodo \/
     public double pegaMedia(){
         return somaDasAvaliacoes / totalDeAvalicoes;
+    }
+
+    @Override
+    public String toString() {
+        return "Titulo{" + "nome: '" + nome +'\'' +", ano de lancamento: " +
+                anoDeLancamento + "," + duracaoEmMinutos;
     }
 
     @Override
