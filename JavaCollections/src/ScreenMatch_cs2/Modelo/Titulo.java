@@ -1,11 +1,12 @@
 package ScreenMatch_cs2.Modelo;
 
+import ScreenMatch_cs2.Excecao.ErroDeConversaoDeAnoException;
 import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo> {
-    @SerializedName("Title") // anotacoes sao metadados
+   //@SerializedName("Title") // anotacoes sao metadados
     private String nome; //atributos
-    @SerializedName("Year")
+    //@SerializedName("Year")
     private int anoDeLancamento; //atributos
     private boolean incluidoNoPlano; //atributos
     private double somaDasAvaliacoes; //atributos
@@ -22,6 +23,10 @@ public class Titulo implements Comparable<Titulo> {
 
     public Titulo(TituloOmdb meuTituloOmdb) {
         this.nome = meuTituloOmdb.Title();
+        if(meuTituloOmdb.year().length() > 4 ){
+            throw new ErroDeConversaoDeAnoException("Não consegui converter o ano" +
+                    " porque tem mais de 4 caracteres");
+        }
         this.anoDeLancamento = Integer.valueOf(meuTituloOmdb.year());
         this.duracaoEmMinutos = Integer.valueOf(meuTituloOmdb.Runtime().substring(0,2));
     }
